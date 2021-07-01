@@ -23,7 +23,8 @@ export default {
         { date: '24.03.21', weight: 86 }
       ]
     }
-  }
+  },
+  created() {}
 }
 </script>
 
