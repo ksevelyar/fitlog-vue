@@ -13,18 +13,22 @@
 <script>
 import ReportCard from '@/components/ReportCard.vue'
 
+import report from '@/api/report.js'
+
 export default {
   components: { ReportCard },
   data() {
     return {
-      reports: [
-        { date: '22.03.21', weight: 88 },
-        { date: '23.03.21', weight: 87 },
-        { date: '24.03.21', weight: 86 }
-      ]
+      reports: []
     }
   },
-  created() {}
+  created: async function() {
+    try {
+      this.reports = (await report.getReports()).data
+    } catch (error) {
+      this.reports = []
+    }
+  }
 }
 </script>
 
