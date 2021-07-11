@@ -1,4 +1,6 @@
-# fitlog
+# Fitlog Vue Client
+
+Back-end: https://github.com/ksevelyar/fitlog-phoenix
 
 ## Project setup
 ```
